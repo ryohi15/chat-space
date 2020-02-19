@@ -6,15 +6,18 @@
 |password|string|null: false|
 ### Association
 has_many :messages
-has_many :groups
+has_many :user_groups
+has_many :groups through: :user_groups
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Association
-has_many :users_groups
 has_many :messages
+has_many :user_groups 
+has_many :users through: :user_groups 
+
 
 ## messagesテーブル
 |Column|Type|Options|
