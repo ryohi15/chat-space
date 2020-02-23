@@ -1,0 +1,16 @@
+.side_bar
+  .side_bar__user-name
+    .top-items
+      .top-items__name
+      .top-items__icons
+        = link_to '#', class: "top-items__new-group" do
+          = icon("fas", "edit")
+        = link_to "#", class: "top-items__edit-user" do
+          = icon("far", "user")
+  .side_bar__groups
+    .side_bar__groups__group
+      = link_to "#",class: "side_bar__groups__group__created-group" do
+        %p.side_bar__groups__group__created-group__name グループ名
+        %p.side_bar__groups__group__created-group__message お前どこ中？
+
+       
