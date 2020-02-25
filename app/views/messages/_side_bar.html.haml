@@ -11,7 +11,8 @@
   .side_bar__groups
     - current_user.groups.each do |group|
       .side_bar__groups__group
-        = link_to "#",class: "side_bar__groups__group__created-group" do
+        = link_to group_messages_path(group) , class: "side_bar__groups__group__created-group" do
           %p.side_bar__groups__group__created-group__name 
             = group.name
-          %p.side_bar__groups__group__created-group__message 
+          %p.side_bar__groups__group__created-group__message
+            = group.show_last_message
