@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    text-decoration: none;
   }
 
 .side_bar{
@@ -9,6 +10,7 @@
   &__user-name{
     background-color: #253141;
     height: 100px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     .top-items{
@@ -21,14 +23,14 @@
         color:#ffffff;
         font-weight: bold;
       }
-      &__new-group{
+      &__icons{
+        &__new-group{
         color: #ffffff;
-        text-decoration: none;
-      }
+        }
       &__edit-user{
         color: #ffffff;
-        text-decoration: none;
         margin-left: 5px;
+        }
       }
     }
   }
