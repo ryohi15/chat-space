@@ -13,11 +13,10 @@
     = render @messages
       
   .main_chat__message-form
-    .form
-      = form_for [@group, @message] do |f|
-        .input-box
-          %input.input-box__text{placeholder: "type a message", type: "text", name: "message[content]", id: "message_content"}
-          %label.input-box__image{for: "message_image"}
-            = icon("fa", "image")
-            %input.input-box__image__file{type:"file", name: "message[image]", id: "message_image"}   
-        %input.new_message__submit-btn{type: "submit", name: "commit", value: "Send", data: {disable: {with: "Send"}}}
+    = form_for [@group, @message] do |f|
+      .new_message__input-box
+        = f.text_field :content, class:"new_message__input-box__text", placeholder: "type a message" 
+        = f.label :image, class:"new_message__input-box__image" do
+          = icon("far", "image")
+          = f.file_field :image, class:"new_message__input-box__image__file"
+      = f.submit "Send", data: {disabled: '送信中...'}, class: "new_message__submit-btn"

@@ -38,6 +38,7 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 20px 20px 0;
+    overflow: scroll;
     &__group{
     margin-bottom: 40px;
       &__created-group{
@@ -55,7 +56,7 @@
     }
   }
 }
-  .main_chat{
+.main_chat{
     width: calc(100vw - 300px);
     float: left;
     height: 100vh;
@@ -76,7 +77,7 @@
         }
         &__member-list{
           font-size: 12px;
-          color: #99999;
+          color: #999999;
         }
       } 
       &__edit-box{
@@ -96,8 +97,9 @@
       height: calc( 100vh - 190px);
       padding: 46px 40px;
       overflow: scroll;
-      &__message{
+      .message{
         padding-bottom: 40px;
+
         &__upper-info{
           display: flex;
           margin-bottom: 10px;
@@ -112,7 +114,7 @@
             margin-left: 10px;
           }
         }
-        &__text{
+        .lower-message__content{
           color: #434a54;
           font-size: 14px;
           margin-bottom: 10px;
@@ -123,9 +125,11 @@
       background-color: #d2d2d2;
       height: 90px;
       padding: 20px 40px;
+
       .new_message{
         display: flex;
-        .input-box{
+               
+        &__input-box{
           position: relative;
           width: 100%;
 
@@ -136,38 +140,37 @@
             color: #434a54;
             border-style: none;
           }
-
-          &__image{
-            font-size: 1.3rem;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            
-            .far{
-              display: inline-block;
-              font: normal normal normal 14px/1 FontAwesome;
-              font-size: inherit;
-              text-rendering: auto;
-              -webkit-font-smoothing: antialiased; 
-            }           
-            &__file{
-              display: none;
+            &__image{
+              font-size: 1.3rem;
+              position: absolute;
+              top: 10px;
+              right: 10px;
+              cursor: pointer;
+              
+              &__far {
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                font-size: inherit;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased; 
+              }           
+              &__file{
+                display: none;
+              }
             }
           }
-        }
         &__submit-btn{
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color: #38aef0;
-          color: white;
-          cursor: pointer;
-        }
+            width: 100px;
+            height: 50px;
+            padding: 0 30px;
+            margin-left: 15px;
+            background-color: #38aef0;
+            color: white;
+            cursor: pointer;
+          }
       }
     }
-  }
+}
 
 
 
