@@ -9,6 +9,7 @@
     height: 100vh;
   &__user-name{
     background-color: #253141;
+    color: white;
     height: 100px;
     padding: 0 20px;
     display: flex;
@@ -62,7 +63,7 @@
     height: 100vh;
     &__groups-info{
     background-color: #ffffff;
-    border: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
     height: 100px;
     margin: 0 40px;
     display: flex;

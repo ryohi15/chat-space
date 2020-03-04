@@ -4,8 +4,9 @@
       .main_chat__groups-info__left-box__current-group  
         = @group.name
       .main_chat__groups-info__left-box__member-list
+        = "member:"
         - @group.users.each do |user|
-          = user.name
+          =  user.name
     = link_to "Edit", edit_group_path(@group), class: "main_chat__groups-info__edit-box"
 
     
